@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+
+  vertical-align: middle;
+
+  thead tr {
+    background-color: $bg1;
+    color: $textAlt1;
+
+    > th {
+      text-align: center;
+    }
+  }
+
+  th,
+  td {
+    padding: 1rem 2rem;
+  }
+
+  tbody {
+    tr {
+      td {
+        font-size: 13px;
+
+        border: 1px solid $border1;
+      }
+    }
+  }
+}

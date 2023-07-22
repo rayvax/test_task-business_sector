@@ -25,3 +25,5 @@ yarn-error.log*
 src/constants/abis/types
 .favorites.json
 .vscode/launch.json
+
+/pattern

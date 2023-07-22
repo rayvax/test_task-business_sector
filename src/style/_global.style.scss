@@ -1,7 +1,7 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,4 +22,13 @@ a {
 
 body {
   margin: 0;
+  padding: 1.5rem 0;
+
+  background-color: $main-bg;
+}
+
+.content-area {
+  margin: 0 auto;
+
+  max-width: 1100px;
 }

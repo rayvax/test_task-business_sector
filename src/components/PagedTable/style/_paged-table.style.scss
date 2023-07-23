@@ -1,4 +1,8 @@
-.paged-table {
+.paged-table-wrapper {
+  table {
+    width: 100%;
+  }
+
   .pages-display {
     display: flex;
     justify-content: space-between;

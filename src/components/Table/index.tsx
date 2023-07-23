@@ -5,12 +5,14 @@ export type TableRowData = {
 };
 
 type TableProps = {
-  data: TableRowData[];
+  data: (TableRowData | undefined)[];
 };
 
 export function Table({ data }: TableProps) {
+  const isLoading = data.some((d) => d === undefined);
+
   return (
-    <table>
+    <table className={`${isLoading ? 'loading' : ''}`}>
       <thead>
         <tr>
           <th>ID</th>
@@ -19,13 +21,21 @@ export function Table({ data }: TableProps) {
         </tr>
       </thead>
       <tbody>
-        {data.map((rowData, i) => (
-          <tr key={`tablerow-${rowData.id}-${i}`}>
-            <td>{rowData.id}</td>
-            <td>{rowData.title}</td>
-            <td>{rowData.description}</td>
-          </tr>
-        ))}
+        {data.map((rowData, i) =>
+          rowData ? (
+            <tr key={`tablerow-${rowData.id}-${i}`}>
+              <td>{rowData.id}</td>
+              <td>{rowData.title}</td>
+              <td>{rowData.description}</td>
+            </tr>
+          ) : (
+            <tr key={`tablerow-loading-${i}`}>
+              <td />
+              <td />
+              <td />
+            </tr>
+          ),
+        )}
       </tbody>
     </table>
   );

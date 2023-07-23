@@ -38,3 +38,19 @@
     @content;
   }
 }
+
+@mixin loadingAnimation() {
+  @keyframes loading {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  animation: loading 1.5s infinite;
+  animation-fill-mode: both;
+  background: linear-gradient(to left, lightgray 25%, $bg2 50%, lightgray 75%);
+  background-size: 400%;
+  will-change: background-position;
+}

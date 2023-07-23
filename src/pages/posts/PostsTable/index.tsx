@@ -1,4 +1,4 @@
-import { Table, TableRowData } from '../Table';
+import { Table, TableRowData } from '../../../components/Table';
 import { PagesDisplay } from './PagesDisplay';
 
 type PagedTableProps = {

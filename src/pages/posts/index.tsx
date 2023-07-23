@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PostsTable } from '../../components/PagedTable';
+import { PostsTable } from './PostsTable';
 import { usePostList } from '../../store/posts/hooks';
 import { fetchPosts } from '../../store/posts/thunk';
 import { useAppDispatch } from '../../store';
@@ -8,7 +8,7 @@ import { PostData } from '../../types/post';
 const emptyPosts: PostData[] = [];
 
 function usePagedPosts() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const postsList = usePostList();
   const dispatch = useAppDispatch();
 
@@ -21,8 +21,8 @@ function usePagedPosts() {
 
   return {
     posts: postsList[page] ?? emptyPosts,
-    page: page + 1,
-    setPage: (page: number) => setPage(page - 1),
+    page,
+    setPage,
   };
 }
 

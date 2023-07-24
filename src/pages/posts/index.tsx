@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { PostsTable } from './PostsTable';
 import { usePostList } from '../../store/posts/hooks';
 import { fetchPosts } from '../../store/posts/thunk';
 import { useAppDispatch } from '../../store';
 import { PostData } from '../../types/post';
+import { Table } from '../../components/Table';
+import { PagesDisplay } from './PagesDisplay';
 
 const emptyPosts: PostData[] = [];
 
@@ -28,13 +29,12 @@ function usePagedPosts() {
 
 export function PostsPage() {
   const { posts, page, setPage } = usePagedPosts();
+  const diplayPosts = posts.map((post) => (post ? { ...post, description: post.body } : undefined));
 
   return (
-    <PostsTable
-      data={posts.map((post) => (post ? { ...post, description: post.body } : undefined))}
-      currentPage={page}
-      pagesCount={5}
-      onPageChange={setPage}
-    />
+    <div className='paged-table-wrapper'>
+      <Table data={diplayPosts} />
+      <PagesDisplay currentPage={page} pagesCount={5} onPageChange={setPage} />
+    </div>
   );
 }

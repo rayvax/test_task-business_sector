@@ -24,7 +24,7 @@ table {
     }
 
     &:nth-child(2) {
-      width: 30%;
+      width: 45%;
     }
   }
 
@@ -70,5 +70,14 @@ table {
         }
       }
     }
+  }
+}
+
+.sortable-heading {
+  button {
+    @include reset-button();
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
   }
 }

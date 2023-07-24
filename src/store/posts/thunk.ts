@@ -14,13 +14,6 @@ export const fetchPosts = createAsyncThunk(
       );
       const json = await resp.json();
       const posts = json as PostData[];
-      const sleep = (delay: number) => {
-        return new Promise((resolve) => {
-          setTimeout(resolve, delay);
-        });
-      };
-
-      await sleep(3000);
 
       return { posts };
     } catch (e) {

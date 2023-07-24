@@ -10,7 +10,7 @@ export function SearchField({ search, onSearchChange, ...inputProps }: SearchFie
   return (
     <div className='search-field'>
       <input
-        type='search'
+        type='text'
         value={search}
         onChange={(e) => onSearchChange(e.target.value)}
         {...inputProps}

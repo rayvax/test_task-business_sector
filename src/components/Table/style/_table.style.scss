@@ -14,17 +14,25 @@ table {
 
   th,
   td {
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
 
     &:first-child {
       text-align: center;
       vertical-align: middle;
 
       width: 2rem;
+
+      @include table-media() {
+        width: auto;
+      }
     }
 
     &:nth-child(2) {
       width: 45%;
+    }
+
+    @include table-media() {
+      padding: 0.5rem 1rem;
     }
   }
 
@@ -70,14 +78,5 @@ table {
         }
       }
     }
-  }
-}
-
-.sortable-heading {
-  button {
-    @include reset-button();
-    display: flex;
-    gap: 1rem;
-    margin: 0 auto;
   }
 }

@@ -13,8 +13,10 @@ export function SortableHeading({ children, sorting, onToggleSorting }: Sortable
   return (
     <th className='sortable-heading'>
       <button onClick={onToggleSorting}>
-        {children}{' '}
-        {sorting === 'desc' ? <ChevronUp /> : <ChevronDown color={sorting ? 'white' : 'gray'} />}
+        {children}
+        <div className='sort-icon'>
+          {sorting === 'desc' ? <ChevronUp /> : <ChevronDown color={sorting ? 'white' : 'gray'} />}
+        </div>
       </button>
     </th>
   );

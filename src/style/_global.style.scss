@@ -25,6 +25,16 @@ body {
   padding: 1rem 0;
 
   background-color: $main-bg;
+
+  @include table-media() {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include mobile-media() {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .content-area {

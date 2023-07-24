@@ -29,6 +29,10 @@ table {
 
     &:nth-child(2) {
       width: 45%;
+
+      @include mobile-media() {
+        width: 30%;
+      }
     }
 
     @include table-media() {

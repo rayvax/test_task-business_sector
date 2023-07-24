@@ -1,5 +1,19 @@
 .paged-table-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 900px;
+
+  .search-field {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
   table {
     width: 100%;
+  }
+
+  .pages-display {
+    margin-top: auto;
   }
 }

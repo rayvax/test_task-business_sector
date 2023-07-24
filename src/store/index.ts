@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { postsReducer } from './posts/reducer';
+import postsReducer from './posts/reducer';
 
 const store = configureStore({
   reducer: { posts: postsReducer },

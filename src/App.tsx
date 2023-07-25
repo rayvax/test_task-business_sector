@@ -1,13 +1,13 @@
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { PostsPage } from './pages/posts';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='content-area'>
         <PostsPage />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

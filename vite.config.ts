@@ -4,5 +4,8 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  envDir: '.',
+  base: process.env.VITE_BASE_PATH,
+  publicDir: process.env.VITE_BASE_PATH,
   plugins: [react(), svgr({ include: '**/*.svg' })],
 });

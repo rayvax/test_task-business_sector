@@ -27,6 +27,12 @@
   text-decoration: inherit; /* no underline */
 }
 
+@mixin reset-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 @mixin reset-input() {
   margin: 0;
   border: 0;

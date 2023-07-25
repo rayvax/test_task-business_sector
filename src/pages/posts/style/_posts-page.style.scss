@@ -1,6 +1,7 @@
 .paged-table-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 
   min-height: 800px;
 
@@ -14,7 +15,6 @@
 
   .search-field {
     width: 50%;
-    margin-bottom: 1rem;
   }
 
   table {

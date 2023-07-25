@@ -4,11 +4,16 @@
 
   padding: 0 45px;
 
+  @include mobile-media() {
+    padding: 0 10px;
+  }
+
   &__counts {
-    list-style: none;
+    @include reset-list();
 
     display: flex;
     gap: 1rem;
+    align-items: center;
 
     font-size: 1.28rem;
     font-style: italic;

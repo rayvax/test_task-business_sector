@@ -28,3 +28,4 @@ src/constants/abis/types
 
 /pattern
 /dist
+.env
